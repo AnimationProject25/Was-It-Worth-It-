@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Was It Worth It ?</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main world container -->
+  <div id="world">
+    <div class="grid-overlay"></div> <!-- Grid for positioning -->
+
+    <!-- ---------- SLIDE 1 ---------- -->
+    <div class="slide" id="slide1">
+      <div id="bed" class="character"><img src="Images/Slide 1/Bed-02.png" /></div>
+      <div id="PC" class="character"><img src="Images/Slide 1/PC-03.png" /></div>
+      <div id="script" class="character"><img src="Images/Slide 1/Slide 1-05.png" /></div>
+      <div id="table" class="character"><img src="Images/Slide 1/Table-01.png" /></div>
+      <div id="window" class="character"><img src="Images/Slide 1/Window-04.png" /></div>
+    </div>
+
+    <!-- ---------- SLIDE 2 ---------- -->
+    <div class="slide" id="slide2" style="display: none;">
+      <div id="bathtub" class="character"><img src="Images/Slide 2/Bathtub-03.png" /></div>
+      <div id="shower" class="character"><img src="Images/Slide 2/Shower-02.png" /></div>
+      <div id="sink" class="character"><img src="Images/Slide 2/Sink-01.png" /></div>
+      <div id="script02" class="character"><img src="Images/Slide 2/Slide 2 Script-04.png" /></div>
+      <div id="toilet" class="character"><img src="Images/Slide 2/toilet-01.png" /></div>
+    </div>
+
+    <!-- ---------- SLIDE 3 ---------- -->
+    <div class="slide" id="slide3" style="display: none;">
+      <div id="Man" class="character"><img src="Images/Slide 3/Man-01.png" /></div>
+      <div id="sign" class="character"><img src="Images/Slide 3/Sign-03.png" /></div>
+      <div id="script03" class="character"><img src="Images/Slide 3/Silde 3 Script-04.png" /></div>
+      <div id="sun" class="character"><img src="Images/Slide 3/Sun-02.png" /></div>
+      <div id="sky" class="character"><img src="Images/Slide 3/sky-05.png" /></div>
+    </div>
+
+    <!-- ---------- SLIDE 4 ---------- -->
+    <div class="slide" id="slide4" style="display: none;">
+      <div id="egg" class="character"><img src="Images/Slide 4/Egg-02.png" /></div>
+      <div id="script04" class="character"><img src="Images/Slide 4/Script foe Slide 4-04.png" /></div>
+      <div id="steak" class="character"><img src="Images/Slide 4/Steak-03.png" /></div>
+      <div id="unusedhobs" class="character"><img src="Images/Slide 4/Unused hobs on stove-01.png" /></div>
+    </div>
+
+    <!-- ---------- SLIDE 5 ---------- -->
+    <div class="slide" id="slide5" style="display: none;">
+      <div id="pullups" class="character"><img src="Images/Slide 5/Doing Pullups-04.png" /></div>
+      <div id="pushups" class="character"><img src="Images/Slide 5/Doing pushups-02.png" /></div>
+      <div id="randomexercise" class="character"><img src="Images/Slide 5/Random Excercise-03.png" /></div>
+      <div id="script05" class="character"><img src="Images/Slide 5/Script for Slide 5-05.png" /></div>
+      <div id="MC" class="character"><img src="Images/Slide 5/The MC-01.png" /></div>
+    </div>
+
+    <!-- ---------- SLIDE 6 ---------- -->
+    <div class="slide" id="slide6" style="display: none;">
+      <div id="first" class="character"><img src="Images/Slide 6/1st Place-04.png" /></div>
+      <div id="second" class="character"><img src="Images/Slide 6/2nd Place-03.png" /></div>
+      <div id="third" class="character"><img src="Images/Slide 6/3rd Place-02.png" /></div>
+      <div id="script06" class="character"><img src="Images/Slide 6/Script for Slide 6-01.png" /></div>
+    </div>
+  
+    <!-- Navigation -->
+    <div id="navigation">
+      <button id="prev">◀</button>
+      <span id="counter">1/6</span>
+      <div id="dots"></div>
+      <button id="next">▶</button>
+    </div>
+  </div>
+
+  <!-- Mute Button -->
+  <button id="mute-btn">🔊 Mute</button>
+  <audio id="bg-music" src="Music/elevate.mp3" loop></audio>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

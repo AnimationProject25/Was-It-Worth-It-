@@ -1,0 +1,162 @@
+/* ---------- Global Page Styles ---------- */
+body {
+  background-color: #81c6ff;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#world {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ---------- Default Character Styles ---------- */
+.character img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* ---------- Scene-Specific Positions (1–12) ---------- */
+
+/* SCENE 1 */
+#bed { position: absolute; top: 30vh; left: 50vw; width: 20vw; }
+#PC { position: absolute; top: 10vh; left: 8vw; width: 30vw; }
+#script { position: absolute; bottom: -17vh; left: 10vw; width: 90%; z-index: 3; }
+#table { position: absolute; top: 70vh; left: 40vw; width: 13.7vw; z-index: 4; }
+#window { position: absolute; top: 2vh; left: 75vw; width: 25vw; z-index: 5; }
+
+/* SCENE 2 */
+#bathtub { position: absolute; top: 0; left: 0; width: 35%; z-index: 0; }
+#shower { position: absolute; bottom: 25vh; left: 55vw; width: 28%; z-index: 2; }
+#sink { position: absolute; bottom: -2vh; left: 2vw; width: 50%; z-index: 1; }
+#script02 { position: absolute; top: 5vh; right: 10vw; width: 20Svw; z-index: 3; }
+#toilet { position: absolute; top: 20vh; left: 10vw; width: 40vw; z-index: 4; }
+
+/* SCENE 3 */
+#Man { position: absolute; top: 20vh; left: 25vw; width: 30%; z-index: 0; }
+#sign { position: absolute; top: 90vh; left: 1vw; width: 12vw; z-index: 2; }
+#script03 { position: absolute; top: 20vh; left: 13.3vw; width: 80%; z-index: 1; }
+#sun { position: absolute; top: -12vh; left: -45vw; width: 40vw; z-index: 3; }
+#sky { position: absolute; top: -8vh; left: 4vw; width: 120%; z-index: 1; }
+
+/* SCENE 4 */
+#egg { position: absolute; top: 0vh; left: 30vw; width: 35%; z-index: 0; }
+#script04 { position: absolute; top: 5vh; left: 5vw; width: 10vw; z-index: 2; }
+#steak { position: absolute; top: 15vh; left: 10vw; width: 25%; z-index: 1; }
+#unusedhobs { position: absolute; bottom: 100vh; left: 100vw; width: 1%; z-index: 3; }
+
+/* SCENE 5 */
+#pullups { position: absolute; top: 10vh; left: 45vw; width: 15%; z-index: 0; }
+#pushups { position: absolute; top: 10vh; left: 20vw; width: 35%; z-index: 1; }
+#randomexercise { position: absolute; top: 40vh; left: 50vw; width: 15%; z-index: 1; }
+#script05 { position: absolute; bottom: -25vh; left: -10vw; width: 35%; z-index: 2; }
+#MC { position: absolute; top: -10vh; left: 5vw; width: 25vw; z-index: 3; }
+
+/* SCENE 6 */
+#first { position: absolute; top: 0; left: 30vw; width: 15%; z-index: 0; }
+#second { position: absolute; top: 30vh; left: 10vw; width: 15%; z-index: 1; }
+#third { position: absolute; bottom: 10vh; left: 60vw; width: 15%; z-index: 2; }
+#script06 { position: absolute; bottom: -5vh; left: 45vw; width: 20%; z-index: 3; }
+
+/* ---------- Navigation Bar ---------- */
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  z-index: 1002;
+  background-color: transparent;
+  padding: 10px;
+}
+button:hover {
+  background: linear-gradient(135deg, #fac000, #ff0909);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #eec200, 0 0 20px #ff0303;
+  animation: flicker 1.8s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  100% { opacity: 0.85; }
+}
+
+#navigation button {
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 10px;
+  background: none;
+  cursor: pointer;
+}
+
+#counter {
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+#dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  opacity: 0.5;
+}
+
+.dot.active {
+  opacity: 1;
+  border: 1px solid black;
+  background: black;
+}
+
+/* ---------- Mute Button ---------- */
+#mute-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1003;
+  padding: 8px 12px;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#story-box {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: center;
+  padding: 0;
+  z-index: 1002;
+  pointer-events: none; /* lets clicks pass through */
+}
+
+#story-text {
+  color: white;
+  font-size: 1.4rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+
